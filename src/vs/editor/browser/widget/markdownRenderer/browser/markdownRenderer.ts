@@ -46,12 +46,16 @@ export class MarkdownRenderer {
 	) { }
 
 	render(markdown: IMarkdownString, options?: MarkdownRenderOptions, outElement?: HTMLElement): IMarkdownRenderResult {
+		console.log(markdown);
+
 		const rendered = renderMarkdown(markdown, {
 			codeBlockRenderer: (alias, value) => this.renderCodeBlock(alias, value),
 			actionHandler: (link, mdStr) => this.openMarkdownLink(link, mdStr),
 			...options,
 		}, outElement);
 		rendered.element.classList.add('rendered-markdown');
+		console.log('rendered', rendered);
+
 		return rendered;
 	}
 

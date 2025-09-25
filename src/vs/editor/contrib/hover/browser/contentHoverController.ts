@@ -63,6 +63,8 @@ export class ContentHoverController extends Disposable implements IEditorContrib
 		@IInstantiationService private readonly _instantiationService: IInstantiationService,
 		@IKeybindingService private readonly _keybindingService: IKeybindingService
 	) {
+
+
 		super();
 		this._reactToEditorMouseMoveRunner = this._register(new RunOnceScheduler(
 			() => {

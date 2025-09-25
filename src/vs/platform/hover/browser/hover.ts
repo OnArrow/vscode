@@ -60,6 +60,9 @@ export class WorkbenchHoverDelegate extends Disposable implements IHoverDelegate
 	}
 
 	showHover(options: IHoverDelegateOptions, focus?: boolean): IHoverWidget | undefined {
+
+
+
 		const overrideOptions = typeof this.overrideOptions === 'function' ? this.overrideOptions(options, focus) : this.overrideOptions;
 
 		// close hover on escape

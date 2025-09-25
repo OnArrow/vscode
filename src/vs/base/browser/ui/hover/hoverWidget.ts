@@ -51,6 +51,7 @@ export class HoverWidget extends Disposable {
 
 export class HoverAction extends Disposable {
 	public static render(parent: HTMLElement, actionOptions: { label: string; iconClass?: string; run: (target: HTMLElement) => void; commandId: string }, keybindingLabel: string | null) {
+
 		return new HoverAction(parent, actionOptions, keybindingLabel);
 	}
 

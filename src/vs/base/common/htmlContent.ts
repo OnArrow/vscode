@@ -48,6 +48,10 @@ export class MarkdownString implements IMarkdownString {
 		value: string = '',
 		isTrustedOrOptions: boolean | { isTrusted?: boolean | MarkdownStringTrustedOptions; supportThemeIcons?: boolean; supportHtml?: boolean } = false,
 	) {
+
+
+
+
 		this.value = value;
 		if (typeof this.value !== 'string') {
 			throw illegalArgument('value');
